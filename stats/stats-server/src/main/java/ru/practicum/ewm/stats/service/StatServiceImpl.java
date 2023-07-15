@@ -9,6 +9,7 @@ import ru.practicum.ewm.stats.model.Hit;
 import ru.practicum.ewm.stats.repository.StatRepository;
 
 import java.time.LocalDateTime;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -46,7 +47,9 @@ public class StatServiceImpl implements StatService {
                                     .count())
                             .build())
                     .collect(Collectors.toList());
-            return viewStatsList;
+            return viewStatsList.stream()
+                    .sorted(Comparator.comparing(ViewStats::getHits).reversed())
+                    .collect(Collectors.toList());
         } else {
             stringListEndpointHitMap = list.stream()
                     .collect(Collectors.groupingBy(Hit::getUri));
@@ -57,7 +60,9 @@ public class StatServiceImpl implements StatService {
                             .hits((long) stringListEndpointHitMap.get(key).size())
                             .build())
                     .collect(Collectors.toList());
-            return viewStatsList;
+            return viewStatsList.stream()
+                    .sorted(Comparator.comparing(ViewStats::getHits).reversed())
+                    .collect(Collectors.toList());
         }
     }
 
