@@ -3,6 +3,6 @@ create TABLE IF NOT EXISTS stats (
     created TIMESTAMP WITHOUT TIME ZONE NOT NULL,
     application VARCHAR(100) NOT NULL,
     uri VARCHAR(100) NOT NULL,
-    ip VARCHAR(100) NOT NULL
+    ip VARCHAR(40) NOT NULL
 );
 
