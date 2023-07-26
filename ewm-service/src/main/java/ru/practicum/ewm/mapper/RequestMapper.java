@@ -17,7 +17,7 @@ public class RequestMapper {
                 .requester(user)
                 .status(eventRequestStatus)
                 .event(event)
-                .created(created.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")))
+                .created(created)
                 .build();
     }
 
@@ -26,7 +26,7 @@ public class RequestMapper {
                 .requester(request.getId())
                 .event(request.getEvent().getId())
                 .id(request.getId())
-                .created(request.getCreated())
+                .created(request.getCreated().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")))
                 .status(request.getStatus())
                 .build();
     }

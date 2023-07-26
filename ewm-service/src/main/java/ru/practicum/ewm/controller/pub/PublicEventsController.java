@@ -33,12 +33,13 @@ public class PublicEventsController {
                                          @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
                                          @RequestParam(required = false) LocalDateTime rangeEnd,
                                          @RequestParam(required = false) Boolean onlyAvailable,
-                                         @RequestParam(defaultValue = "EVENT_DATE") String sort, // VIEWS
+                                         @RequestParam(defaultValue = "EVENT_DATE") String sort,
                                          @PositiveOrZero @RequestParam(defaultValue = "0") Integer from,
                                          @Positive @RequestParam(defaultValue = "10") Integer size,
                                          HttpServletRequest httpServletRequest) {
         log.info("Method of getting events for All was caused in PublicEventsController");
-        return eventService.getEvents(text, categories, paid, rangeStart, rangeEnd, onlyAvailable, sort, from, size, httpServletRequest);
+        return eventService.getEvents(text, categories, paid, rangeStart, rangeEnd, onlyAvailable, sort, from, size,
+                httpServletRequest);
     }
 
     @GetMapping("/{eventId}")

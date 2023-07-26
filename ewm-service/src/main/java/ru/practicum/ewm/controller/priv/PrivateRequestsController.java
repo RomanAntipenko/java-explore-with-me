@@ -22,7 +22,8 @@ public class PrivateRequestsController {
     @GetMapping("/{userId}/requests")
     @ResponseStatus(HttpStatus.OK)
     public List<ParticipationRequestDto> getRequestsForUser(@PathVariable Long userId) {
-        log.info("Method of getting requests for participation of concrete user was caused in PrivateRequestsController");
+        log.info("Method of getting requests for participation of concrete user was caused " +
+                "in PrivateRequestsController");
         return requestService.getRequestsForUser(userId);
     }
 
@@ -30,7 +31,8 @@ public class PrivateRequestsController {
     @ResponseStatus(HttpStatus.CREATED)
     public ParticipationRequestDto createRequestForUser(@PathVariable Long userId,
                                                         @RequestParam Long eventId) {
-        log.info("Method of creating request for participation from concrete user to concrete event was caused in PrivateRequestsController");
+        log.info("Method of creating request for participation from concrete user to concrete event was caused " +
+                "in PrivateRequestsController");
         return requestService.createRequestForUser(userId, eventId);
     }
 
@@ -38,7 +40,8 @@ public class PrivateRequestsController {
     @ResponseStatus(HttpStatus.OK)
     public ParticipationRequestDto updateRequestForUser(@PathVariable Long userId,
                                                         @PathVariable Long requestId) {
-        log.info("Method of canceling request for participation from concrete user was caused in PrivateRequestsController");
+        log.info("Method of canceling request for participation from concrete user was caused " +
+                "in PrivateRequestsController");
         return requestService.updateRequestForUser(userId, requestId);
     }
 }

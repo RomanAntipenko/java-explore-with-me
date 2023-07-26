@@ -48,7 +48,7 @@ public class RequestServiceImpl implements RequestService {
                 new ObjectNotFoundException(String.format("Event with id=\"%s\" was not found", eventId)));
         User user = userRepository.findById(userId).orElseThrow(() ->
                 new ObjectNotFoundException(String.format("User with id=\"%s\" was not found", userId)));
-        if (!event.getState().equals(EventStatus.PUBLISHED)) {
+        if (event.getState() != (EventStatus.PUBLISHED)) {
             throw new ConditionNotMetException("Impossible to create request to unpublished event");
         }
         if (event.getInitiator().getId().equals(userId)) {

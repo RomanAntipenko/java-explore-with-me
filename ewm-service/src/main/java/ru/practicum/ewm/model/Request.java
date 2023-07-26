@@ -4,6 +4,7 @@ import lombok.*;
 import ru.practicum.ewm.enums.EventRequestStatus;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Data
 @Builder
@@ -14,7 +15,7 @@ import javax.persistence.*;
 @EqualsAndHashCode
 public class Request {
     @Column
-    private String created;
+    private LocalDateTime created;
     @ManyToOne
     @JoinColumn(name = "event_id")
     private Event event;

@@ -69,7 +69,8 @@ public class PrivateEventsController {
     @ResponseStatus(HttpStatus.OK)
     public EventRequestStatusUpdateResult getResponseOnEventOfUser(@PathVariable Long userId,
                                                                    @PathVariable Long eventId,
-                                                                   @RequestBody EventRequestStatusUpdateRequest eventRequestStatusUpdateRequest) {
+                                                                   @RequestBody EventRequestStatusUpdateRequest
+                                                                           eventRequestStatusUpdateRequest) {
         log.info("Method of getting event of concrete user by id was caused in PrivateEventsController");
         return eventService.getResponseOnEventOfUser(userId, eventId, eventRequestStatusUpdateRequest);
     }

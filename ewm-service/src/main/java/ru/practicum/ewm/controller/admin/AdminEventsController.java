@@ -29,7 +29,7 @@ public class AdminEventsController {
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<EventFullDto> getAdminEvents(@RequestParam(required = false) List<Long> users,
-                                             @RequestParam(required = false) /*EventStatus states*/ List<EventStatus> states,
+                                             @RequestParam(required = false) List<EventStatus> states,
                                              @RequestParam(required = false) List<Long> categories,
                                              @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
                                              @RequestParam(required = false) LocalDateTime rangeStart,

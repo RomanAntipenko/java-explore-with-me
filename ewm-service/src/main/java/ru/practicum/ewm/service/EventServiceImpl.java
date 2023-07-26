@@ -57,7 +57,8 @@ public class EventServiceImpl implements EventService {
         User creatorOfEvent = userRepository.findById(userId).orElseThrow(() ->
                 new ObjectNotFoundException(String.format("User with id=\"%s\" was not found", userId)));
         Category categoryOfEvent = categoryRepository.findById(newEventDto.getCategory()).orElseThrow(() ->
-                new ObjectNotFoundException(String.format("Category with id=\"%s\" was not found", newEventDto.getCategory())));
+                new ObjectNotFoundException(String.format("Category with id=\"%s\" was not found",
+                        newEventDto.getCategory())));
         Location locationOfEvent = locationRepository.save(Location.builder()
                 .lon(newEventDto.getLocation().getLon())
                 .lat(newEventDto.getLocation().getLat())
@@ -110,8 +111,6 @@ public class EventServiceImpl implements EventService {
             eventDate = LocalDateTime.parse(updateEventUserRequest.getEventDate(),
                     DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
             if (eventDate.isBefore(LocalDateTime.now().plusHours(2L))) {
-                /*throw new ConditionValidationException(String.format("Field: eventDate. " +
-                        "Error: must have the date witch are not already was plus 2 hours. Value: \"%s\"", eventDate));*/
                 throw new IncorrectRequestException(String.format("Field: eventDate. " +
                         "Error: must have the date witch are not already was plus 2 hours. Value: \"%s\"", eventDate));
             }
@@ -124,7 +123,8 @@ public class EventServiceImpl implements EventService {
 
         if (updateEventUserRequest.getCategory() != null) {
             Category category = categoryRepository.findById(updateEventUserRequest.getCategory()).orElseThrow(() ->
-                    new ObjectNotFoundException(String.format("Category with id=\"%s\" was not found", updateEventUserRequest.getCategory())));
+                    new ObjectNotFoundException(String.format("Category with id=\"%s\" was not found",
+                            updateEventUserRequest.getCategory())));
             event.setCategory(category);
         }
 
@@ -145,12 +145,18 @@ public class EventServiceImpl implements EventService {
             event.getLocation().setLon(updateEventUserRequest.getLocation().getLon());
         }
 
-        event.setAnnotation(Optional.ofNullable(updateEventUserRequest.getAnnotation()).orElse(event.getAnnotation()));
-        event.setDescription(Optional.ofNullable(updateEventUserRequest.getDescription()).orElse(event.getDescription()));
-        event.setPaid(Optional.ofNullable(updateEventUserRequest.getPaid()).orElse(event.getPaid()));
-        event.setTitle(Optional.ofNullable(updateEventUserRequest.getTitle()).orElse(event.getTitle()));
-        event.setRequestModeration(Optional.ofNullable(updateEventUserRequest.getRequestModeration()).orElse(event.getRequestModeration()));
-        event.setParticipantLimit(Optional.ofNullable(updateEventUserRequest.getParticipantLimit()).orElse(event.getParticipantLimit()));
+        event.setAnnotation(Optional.ofNullable(updateEventUserRequest.getAnnotation())
+                .orElse(event.getAnnotation()));
+        event.setDescription(Optional.ofNullable(updateEventUserRequest.getDescription())
+                .orElse(event.getDescription()));
+        event.setPaid(Optional.ofNullable(updateEventUserRequest.getPaid())
+                .orElse(event.getPaid()));
+        event.setTitle(Optional.ofNullable(updateEventUserRequest.getTitle())
+                .orElse(event.getTitle()));
+        event.setRequestModeration(Optional.ofNullable(updateEventUserRequest.getRequestModeration())
+                .orElse(event.getRequestModeration()));
+        event.setParticipantLimit(Optional.ofNullable(updateEventUserRequest.getParticipantLimit())
+                .orElse(event.getParticipantLimit()));
 
         try {
             Event savedEvent = eventRepository.save(event);
@@ -162,7 +168,7 @@ public class EventServiceImpl implements EventService {
 
     @Override
     public List<ParticipationRequestDto> getRequestsOnEventOfUser(Long userId, Long eventId) {
-        if (!eventRepository.existsByInitiatorIdAndId(userId, eventId)) { //
+        if (!eventRepository.existsByInitiatorIdAndId(userId, eventId)) {
             throw new ObjectNotFoundException(String.format("Event with id=\"%s\" was not found", eventId));
         }
         return requestRepository.findAllByEventId(eventId).stream()
@@ -172,12 +178,14 @@ public class EventServiceImpl implements EventService {
 
     @Override
     public EventRequestStatusUpdateResult getResponseOnEventOfUser(Long userId, Long eventId,
-                                                                   EventRequestStatusUpdateRequest eventRequestStatusUpdateRequest) {
+                                                                   EventRequestStatusUpdateRequest
+                                                                           eventRequestStatusUpdateRequest) {
         Event event = eventRepository.findByInitiatorIdAndId(userId, eventId);
         if (event == null) {
             throw new ObjectNotFoundException(String.format("Event with id=\"%s\" was not found", eventId));
         }
-        List<Request> requests = requestRepository.findAllByEventIdAndIdIn(eventId, eventRequestStatusUpdateRequest.getRequestIds());
+        List<Request> requests = requestRepository.findAllByEventIdAndIdIn(eventId,
+                eventRequestStatusUpdateRequest.getRequestIds());
         EventRequestStatusUpdateResult result = EventRequestStatusUpdateResult.builder()
                 .confirmedRequests(new ArrayList<>())
                 .rejectedRequests(new ArrayList<>())
@@ -220,7 +228,8 @@ public class EventServiceImpl implements EventService {
 
     @Override
     public List<EventFullDto> getAdminEvents(List<Long> users, List<EventStatus> states, List<Long> categories,
-                                             LocalDateTime rangeStart, LocalDateTime rangeEnd, Integer from, Integer size) {
+                                             LocalDateTime rangeStart, LocalDateTime rangeEnd, Integer from,
+                                             Integer size) {
         Pageable pageable = PageRequest.of(from / size, size);
 
         Specification<Event> specification = (Root<Event> root, CriteriaQuery<?> cq, CriteriaBuilder cb) -> {
@@ -286,12 +295,18 @@ public class EventServiceImpl implements EventService {
             event.getLocation().setLat(updateEventAdminRequest.getLocation().getLat());
             event.getLocation().setLon(updateEventAdminRequest.getLocation().getLon());
         }
-        event.setAnnotation(Optional.ofNullable(updateEventAdminRequest.getAnnotation()).orElse(event.getAnnotation()));
-        event.setDescription(Optional.ofNullable(updateEventAdminRequest.getDescription()).orElse(event.getDescription()));
-        event.setPaid(Optional.ofNullable(updateEventAdminRequest.getPaid()).orElse(event.getPaid()));
-        event.setTitle(Optional.ofNullable(updateEventAdminRequest.getTitle()).orElse(event.getTitle()));
-        event.setRequestModeration(Optional.ofNullable(updateEventAdminRequest.getRequestModeration()).orElse(event.getRequestModeration()));
-        event.setParticipantLimit(Optional.ofNullable(updateEventAdminRequest.getParticipantLimit()).orElse(event.getParticipantLimit()));
+        event.setAnnotation(Optional.ofNullable(updateEventAdminRequest.getAnnotation())
+                .orElse(event.getAnnotation()));
+        event.setDescription(Optional.ofNullable(updateEventAdminRequest.getDescription())
+                .orElse(event.getDescription()));
+        event.setPaid(Optional.ofNullable(updateEventAdminRequest.getPaid())
+                .orElse(event.getPaid()));
+        event.setTitle(Optional.ofNullable(updateEventAdminRequest.getTitle())
+                .orElse(event.getTitle()));
+        event.setRequestModeration(Optional.ofNullable(updateEventAdminRequest.getRequestModeration())
+                .orElse(event.getRequestModeration()));
+        event.setParticipantLimit(Optional.ofNullable(updateEventAdminRequest.getParticipantLimit())
+                .orElse(event.getParticipantLimit()));
 
         try {
             Event savedEvent = eventRepository.save(event);
@@ -350,7 +365,7 @@ public class EventServiceImpl implements EventService {
         statsClient.createHit(EndpointHit.builder()
                 .uri(httpServletRequest.getRequestURI())
                 .ip(httpServletRequest.getRemoteAddr())
-                .app("ewm-service")
+                .app("ewm-main-service")
                 .timestamp(LocalDateTime.now()) //
                 .build());
         return eventList.stream()
@@ -364,16 +379,20 @@ public class EventServiceImpl implements EventService {
         if (event == null) {
             throw new ObjectNotFoundException(String.format("Event with id=\"%s\" was not found", eventId));
         }
-        Long views = (long) statsClient.getViewStats(LocalDateTime.now().minusYears(100), LocalDateTime.now().plusYears(100),
-                true, List.of(httpServletRequest.getRequestURI())).size();
+        Long views = (long) statsClient.getViewStats(LocalDateTime.now().minusYears(100)
+                        .format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")),
+                LocalDateTime.now().plusYears(100).format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")),
+                true, new String[]{httpServletRequest.getRequestURI()}).size();
         statsClient.createHit(EndpointHit.builder()
                 .uri(httpServletRequest.getRequestURI())
                 .ip(httpServletRequest.getRemoteAddr())
-                .app("ewm-service")
+                .app("ewm-main-service")
                 .timestamp(LocalDateTime.now()) //
                 .build());
-        Long newViews = (long) statsClient.getViewStats(LocalDateTime.now().minusYears(100), LocalDateTime.now().plusYears(100),
-                true, List.of(httpServletRequest.getRequestURI())).size();
+        Long newViews = (long) statsClient.getViewStats(LocalDateTime.now().minusYears(100)
+                        .format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")),
+                LocalDateTime.now().plusYears(100).format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")),
+                true, new String[]{httpServletRequest.getRequestURI()}).size();
         if (newViews > views) {
             event.setViews(newViews);
             eventRepository.save(event);

@@ -26,11 +26,9 @@ public class NewEventDto {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private String eventDate;
     private LocationDto location;
-    //false
     private Boolean paid = false;
     @PositiveOrZero
     private Long participantLimit = 0L;
-    //true
     private Boolean requestModeration = true;
     @Size(min = 3, max = 120)
     @NotBlank
