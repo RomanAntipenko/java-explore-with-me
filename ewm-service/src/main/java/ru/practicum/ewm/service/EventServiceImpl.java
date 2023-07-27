@@ -1,6 +1,5 @@
 package ru.practicum.ewm.service;
 
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -36,7 +35,6 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-@RequiredArgsConstructor
 @Slf4j
 public class EventServiceImpl implements EventService {
 
@@ -46,9 +44,21 @@ public class EventServiceImpl implements EventService {
     private final LocationRepository locationRepository;
     private final RequestRepository requestRepository;
     private final StatsClient statsClient;
-    DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-    @Value("${application.name}")
+    private final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
     private final String applicationName;
+
+    public EventServiceImpl(EventRepository eventRepository, UserRepository userRepository,
+                            CategoryRepository categoryRepository, LocationRepository locationRepository,
+                            RequestRepository requestRepository, StatsClient statsClient,
+                            @Value("${application.name}") String applicationName) {
+        this.eventRepository = eventRepository;
+        this.userRepository = userRepository;
+        this.categoryRepository = categoryRepository;
+        this.locationRepository = locationRepository;
+        this.requestRepository = requestRepository;
+        this.statsClient = statsClient;
+        this.applicationName = applicationName;
+    }
 
     @Override
     public EventFullDto createEvent(Long userId, NewEventDto newEventDto) {
