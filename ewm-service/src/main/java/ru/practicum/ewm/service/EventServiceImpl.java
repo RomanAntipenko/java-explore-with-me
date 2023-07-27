@@ -2,6 +2,7 @@ package ru.practicum.ewm.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -45,11 +46,14 @@ public class EventServiceImpl implements EventService {
     private final LocationRepository locationRepository;
     private final RequestRepository requestRepository;
     private final StatsClient statsClient;
+    DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    @Value("${application.name}")
+    private final String applicationName;
 
     @Override
     public EventFullDto createEvent(Long userId, NewEventDto newEventDto) {
         LocalDateTime eventDate = LocalDateTime.parse(newEventDto.getEventDate(),
-                DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+                dateFormatter);
         if (eventDate.isBefore(LocalDateTime.now().plusHours(2L))) {
             throw new IncorrectRequestException(String.format("Field: eventDate. " +
                     "Error: must have the date witch are not already was. Value: \"%s\"", eventDate));
@@ -109,7 +113,7 @@ public class EventServiceImpl implements EventService {
 
         if (updateEventUserRequest.getEventDate() != null) {
             eventDate = LocalDateTime.parse(updateEventUserRequest.getEventDate(),
-                    DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+                    dateFormatter);
             if (eventDate.isBefore(LocalDateTime.now().plusHours(2L))) {
                 throw new IncorrectRequestException(String.format("Field: eventDate. " +
                         "Error: must have the date witch are not already was plus 2 hours. Value: \"%s\"", eventDate));
@@ -265,7 +269,7 @@ public class EventServiceImpl implements EventService {
 
         if (updateEventAdminRequest.getEventDate() != null) {
             eventDate = LocalDateTime.parse(updateEventAdminRequest.getEventDate(),
-                    DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+                    dateFormatter);
             if (eventDate.isBefore(LocalDateTime.now().plusHours(1L))) {
                 throw new IncorrectRequestException(String.format("Field: eventDate. " +
                         "Error: must have the date witch are not already was plus 1 hour. Value: \"%s\"", eventDate));
@@ -361,12 +365,12 @@ public class EventServiceImpl implements EventService {
             return cb.and(predicates.toArray(new Predicate[predicates.size()]));
         };
 
-        Page<Event> eventList = eventRepository.findAll(specification, pageable)/*.toList()*/;
+        Page<Event> eventList = eventRepository.findAll(specification, pageable);
         statsClient.createHit(EndpointHit.builder()
                 .uri(httpServletRequest.getRequestURI())
                 .ip(httpServletRequest.getRemoteAddr())
-                .app("ewm-main-service")
-                .timestamp(LocalDateTime.now()) //
+                .app(applicationName)
+                .timestamp(LocalDateTime.now())
                 .build());
         return eventList.stream()
                 .map(EventMapper::toShortFromEvent)
@@ -380,18 +384,18 @@ public class EventServiceImpl implements EventService {
             throw new ObjectNotFoundException(String.format("Event with id=\"%s\" was not found", eventId));
         }
         Long views = (long) statsClient.getViewStats(LocalDateTime.now().minusYears(100)
-                        .format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")),
-                LocalDateTime.now().plusYears(100).format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")),
+                        .format(dateFormatter),
+                LocalDateTime.now().plusYears(100).format(dateFormatter),
                 true, new String[]{httpServletRequest.getRequestURI()}).size();
         statsClient.createHit(EndpointHit.builder()
                 .uri(httpServletRequest.getRequestURI())
                 .ip(httpServletRequest.getRemoteAddr())
-                .app("ewm-main-service")
-                .timestamp(LocalDateTime.now()) //
+                .app(applicationName)
+                .timestamp(LocalDateTime.now())
                 .build());
         Long newViews = (long) statsClient.getViewStats(LocalDateTime.now().minusYears(100)
-                        .format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")),
-                LocalDateTime.now().plusYears(100).format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")),
+                        .format(dateFormatter),
+                LocalDateTime.now().plusYears(100).format(dateFormatter),
                 true, new String[]{httpServletRequest.getRequestURI()}).size();
         if (newViews > views) {
             event.setViews(newViews);
