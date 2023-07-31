@@ -433,7 +433,7 @@
 							"variable": [
 								{
 									"key": "eventId",
-									"value": "103"
+									"value": "106"
 								}
 							]
 						}
@@ -491,7 +491,7 @@
 									"pm.test(\"Test comment 'event' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser).to.have.property('event');\r",
-									"    pm.expect(bodyOfAnser.event, '\"event\" must be 103').to.eql(103);\r",
+									"    pm.expect(bodyOfAnser.event, '\"event\" must be 106').to.eql(106);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment 'author' field\", function () {\r",
@@ -542,7 +542,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "103"
+									"value": "106"
 								}
 							]
 						}
@@ -606,7 +606,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "103"
+									"value": "106"
 								}
 							]
 						}
@@ -735,7 +735,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "103"
+									"value": "106"
 								}
 							]
 						}
@@ -800,7 +800,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "103"
+									"value": "106"
 								}
 							]
 						}
@@ -865,7 +865,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "103"
+									"value": "106"
 								}
 							]
 						}
@@ -926,7 +926,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "103"
+									"value": "106"
 								}
 							]
 						}
@@ -979,7 +979,7 @@
 									"pm.test(\"Test comment 'event' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser).to.have.property('event');\r",
-									"    pm.expect(bodyOfAnser.event, '\"event\" must be 103').to.eql(103);\r",
+									"    pm.expect(bodyOfAnser.event, '\"event\" must be 106').to.eql(106);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment 'author' field\", function () {\r",
@@ -1030,7 +1030,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "103"
+									"value": "106"
 								}
 							]
 						}
@@ -1094,7 +1094,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "104"
+									"value": "107"
 								}
 							]
 						}
@@ -1164,7 +1164,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "103"
+									"value": "106"
 								},
 								{
 									"key": "commentId",
@@ -1302,7 +1302,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "103"
+									"value": "106"
 								},
 								{
 									"key": "commentId",
@@ -1371,7 +1371,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "103"
+									"value": "106"
 								},
 								{
 									"key": "commentId",
@@ -1428,7 +1428,7 @@
 									"pm.test(\"Test comment 'event' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser).to.have.property('event');\r",
-									"    pm.expect(bodyOfAnser.event, '\"event\" must be 103').to.eql(103);\r",
+									"    pm.expect(bodyOfAnser.event, '\"event\" must be 106').to.eql(106);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment 'author' field\", function () {\r",
@@ -1480,7 +1480,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "103"
+									"value": "106"
 								},
 								{
 									"key": "commentId",
@@ -1546,7 +1546,7 @@
 							"variable": [
 								{
 									"key": "eventId",
-									"value": "104"
+									"value": "107"
 								}
 							]
 						}
@@ -1599,7 +1599,7 @@
 									"pm.test(\"Test comment 'event' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser).to.have.property('event');\r",
-									"    pm.expect(bodyOfAnser.event, '\"event\" must be 104').to.eql(104);\r",
+									"    pm.expect(bodyOfAnser.event, '\"event\" must be 107').to.eql(107);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment 'author' field\", function () {\r",
@@ -1650,7 +1650,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "104"
+									"value": "107"
 								}
 							]
 						}
@@ -1703,7 +1703,7 @@
 									"pm.test(\"Test comment 'event' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser).to.have.property('event');\r",
-									"    pm.expect(bodyOfAnser.event, '\"event\" must be 104').to.eql(104);\r",
+									"    pm.expect(bodyOfAnser.event, '\"event\" must be 107').to.eql(107);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment 'author' field\", function () {\r",
@@ -1754,7 +1754,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "104"
+									"value": "107"
 								}
 							]
 						}
@@ -1811,7 +1811,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "104"
+									"value": "107"
 								},
 								{
 									"key": "commentId",
@@ -1933,7 +1933,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "104"
+									"value": "107"
 								},
 								{
 									"key": "commentId",
@@ -1994,7 +1994,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "104"
+									"value": "107"
 								},
 								{
 									"key": "commentId",
@@ -2055,7 +2055,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "104"
+									"value": "107"
 								},
 								{
 									"key": "commentId",
@@ -2217,7 +2217,7 @@
 									"pm.test(\"Test comment 'event' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser).to.have.property('event');\r",
-									"    pm.expect(bodyOfAnser.event, '\"event\" must be 103').to.eql(103);\r",
+									"    pm.expect(bodyOfAnser.event, '\"event\" must be 106').to.eql(106);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment 'author' field\", function () {\r",
@@ -2268,7 +2268,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "103"
+									"value": "106"
 								}
 							]
 						}
@@ -2372,7 +2372,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "103"
+									"value": "106"
 								}
 							]
 						}
@@ -2429,7 +2429,7 @@
 									"pm.test(\"Test comment[0] 'event' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[0]).to.have.property('event');\r",
-									"    pm.expect(bodyOfAnser[0].event, '\"event\" must be 103').to.eql(103);\r",
+									"    pm.expect(bodyOfAnser[0].event, '\"event\" must be 106').to.eql(106);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment[0] 'author' field\", function () {\r",
@@ -2465,7 +2465,7 @@
 									"pm.test(\"Test comment[1] 'event' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[1]).to.have.property('event');\r",
-									"    pm.expect(bodyOfAnser[1].event, '\"event\" must be 103').to.eql(103);\r",
+									"    pm.expect(bodyOfAnser[1].event, '\"event\" must be 106').to.eql(106);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment[1] 'author' field\", function () {\r",
@@ -2501,7 +2501,7 @@
 									"pm.test(\"Test comment[2] 'event' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[2]).to.have.property('event');\r",
-									"    pm.expect(bodyOfAnser[2].event, '\"event\" must be 103').to.eql(103);\r",
+									"    pm.expect(bodyOfAnser[2].event, '\"event\" must be 106').to.eql(106);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment[2] 'author' field\", function () {\r",
@@ -2538,7 +2538,7 @@
 									"pm.test(\"Test comment[3] 'event' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[3]).to.have.property('event');\r",
-									"    pm.expect(bodyOfAnser[3].event, '\"event\" must be 103').to.eql(103);\r",
+									"    pm.expect(bodyOfAnser[3].event, '\"event\" must be 106').to.eql(106);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment[3] 'author' field\", function () {\r",
@@ -2598,7 +2598,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "103"
+									"value": "106"
 								}
 							]
 						}
@@ -2655,7 +2655,7 @@
 									"pm.test(\"Test comment[0] 'event' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[0]).to.have.property('event');\r",
-									"    pm.expect(bodyOfAnser[0].event, '\"event\" must be 103').to.eql(103);\r",
+									"    pm.expect(bodyOfAnser[0].event, '\"event\" must be 106').to.eql(106);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment[0] 'author' field\", function () {\r",
@@ -2691,7 +2691,7 @@
 									"pm.test(\"Test comment[1] 'event' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[1]).to.have.property('event');\r",
-									"    pm.expect(bodyOfAnser[1].event, '\"event\" must be 103').to.eql(103);\r",
+									"    pm.expect(bodyOfAnser[1].event, '\"event\" must be 106').to.eql(106);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment[1] 'author' field\", function () {\r",
@@ -2727,7 +2727,7 @@
 									"pm.test(\"Test comment[2] 'event' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[2]).to.have.property('event');\r",
-									"    pm.expect(bodyOfAnser[2].event, '\"event\" must be 103').to.eql(103);\r",
+									"    pm.expect(bodyOfAnser[2].event, '\"event\" must be 106').to.eql(106);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment[2] 'author' field\", function () {\r",
@@ -2763,7 +2763,7 @@
 									"pm.test(\"Test comment[3] 'event' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[3]).to.have.property('event');\r",
-									"    pm.expect(bodyOfAnser[3].event, '\"event\" must be 103').to.eql(103);\r",
+									"    pm.expect(bodyOfAnser[3].event, '\"event\" must be 106').to.eql(106);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment[3] 'author' field\", function () {\r",
@@ -2825,7 +2825,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "103"
+									"value": "106"
 								}
 							]
 						}
@@ -2882,7 +2882,7 @@
 									"pm.test(\"Test comment[0] 'event' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[0]).to.have.property('event');\r",
-									"    pm.expect(bodyOfAnser[0].event, '\"event\" must be 103').to.eql(103);\r",
+									"    pm.expect(bodyOfAnser[0].event, '\"event\" must be 106').to.eql(106);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment[0] 'author' field\", function () {\r",
@@ -2918,7 +2918,7 @@
 									"pm.test(\"Test comment[1] 'event' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[1]).to.have.property('event');\r",
-									"    pm.expect(bodyOfAnser[1].event, '\"event\" must be 103').to.eql(103);\r",
+									"    pm.expect(bodyOfAnser[1].event, '\"event\" must be 106').to.eql(106);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment[1] 'author' field\", function () {\r",
@@ -2954,7 +2954,7 @@
 									"pm.test(\"Test comment[2] 'event' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[2]).to.have.property('event');\r",
-									"    pm.expect(bodyOfAnser[2].event, '\"event\" must be 103').to.eql(103);\r",
+									"    pm.expect(bodyOfAnser[2].event, '\"event\" must be 106').to.eql(106);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment[2] 'author' field\", function () {\r",
@@ -2991,7 +2991,7 @@
 									"pm.test(\"Test comment[3] 'event' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[3]).to.have.property('event');\r",
-									"    pm.expect(bodyOfAnser[3].event, '\"event\" must be 103').to.eql(103);\r",
+									"    pm.expect(bodyOfAnser[3].event, '\"event\" must be 106').to.eql(106);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment[3] 'author' field\", function () {\r",
@@ -3037,7 +3037,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "103"
+									"value": "106"
 								}
 							]
 						}
@@ -3118,7 +3118,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "104"
+									"value": "107"
 								}
 							]
 						}
@@ -3192,7 +3192,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "103"
+									"value": "106"
 								}
 							]
 						}
@@ -3340,7 +3340,7 @@
 								},
 								{
 									"key": "eventId",
-									"value": "103"
+									"value": "106"
 								}
 							]
 						}
@@ -3397,7 +3397,7 @@
 									"pm.test(\"Test comment[0] 'event' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[0]).to.have.property('event');\r",
-									"    pm.expect(bodyOfAnser[0].event, '\"event\" must be 103').to.eql(103);\r",
+									"    pm.expect(bodyOfAnser[0].event, '\"event\" must be 106').to.eql(106);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment[0] 'author' field\", function () {\r",
@@ -3544,7 +3544,7 @@
 									"pm.test(\"Test comment 'event' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser).to.have.property('event');\r",
-									"    pm.expect(bodyOfAnser.event, '\"event\" must be 103').to.eql(103);\r",
+									"    pm.expect(bodyOfAnser.event, '\"event\" must be 106').to.eql(106);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment 'author' field\", function () {\r",
