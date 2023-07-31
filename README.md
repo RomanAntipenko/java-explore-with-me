@@ -21,4 +21,4 @@
 
  Java, Maven, Spring-Boot, Hibernate, Lombok, Docker, Postgresql
 
-[PullRequest feature comments]()
+[PullRequest feature comments](https://github.com/RomanAntipenko/java-explore-with-me/pull/5)
