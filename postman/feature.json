@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "d3ac1049-c2ed-4be1-83cf-e7255c83a659",
-		"name": "Feature_comments_for_Explore_with_me new",
+		"name": "Feature_comments_for_Explore_with_me с учетом скриптов предыдущих веток",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26017314"
 	},
@@ -26,7 +26,7 @@
 									"pm.test(\"Test user 'id' field\", function () {\r",
 									"    var jsonData = pm.response.json();\r",
 									"    pm.expect(jsonData).to.have.property('id');\r",
-									"    pm.expect(jsonData.id, '\"id\" must be 134').to.eql(134);\r",
+									"    pm.expect(jsonData.id, '\"id\" must be 136').to.eql(136);\r",
 									"});\r",
 									"pm.test(\"Test user 'email' field\", function () {\r",
 									"    var jsonData = pm.response.json();\r",
@@ -91,7 +91,7 @@
 									"pm.test(\"Test user 'id' field\", function () {\r",
 									"    var jsonData = pm.response.json();\r",
 									"    pm.expect(jsonData).to.have.property('id');\r",
-									"    pm.expect(jsonData.id, '\"id\" must be 135').to.eql(135);\r",
+									"    pm.expect(jsonData.id, '\"id\" must be 137').to.eql(137);\r",
 									"});\r",
 									"pm.test(\"Test user 'email' field\", function () {\r",
 									"    var jsonData = pm.response.json();\r",
@@ -156,7 +156,7 @@
 									"pm.test(\"Test user 'id' field\", function () {\r",
 									"    var jsonData = pm.response.json();\r",
 									"    pm.expect(jsonData).to.have.property('id');\r",
-									"    pm.expect(jsonData.id, '\"id\" must be 136').to.eql(136);\r",
+									"    pm.expect(jsonData.id, '\"id\" must be 138').to.eql(138);\r",
 									"});\r",
 									"pm.test(\"Test user 'email' field\", function () {\r",
 									"    var jsonData = pm.response.json();\r",
@@ -314,7 +314,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "133"
+									"value": "136"
 								}
 							]
 						}
@@ -371,7 +371,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "134"
+									"value": "137"
 								}
 							]
 						}
@@ -497,7 +497,7 @@
 									"pm.test(\"Test comment 'author' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser).to.have.property('author');\r",
-									"    pm.expect(bodyOfAnser.author, '\"author\" must be 135').to.eql(135);\r",
+									"    pm.expect(bodyOfAnser.author, '\"author\" must be 137').to.eql(137);\r",
 									"});\r",
 									""
 								],
@@ -538,7 +538,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "135"
+									"value": "137"
 								},
 								{
 									"key": "eventId",
@@ -666,7 +666,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "135"
+									"value": "137"
 								},
 								{
 									"key": "eventId",
@@ -731,7 +731,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "135"
+									"value": "137"
 								},
 								{
 									"key": "eventId",
@@ -796,7 +796,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "135"
+									"value": "137"
 								},
 								{
 									"key": "eventId",
@@ -861,7 +861,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "135"
+									"value": "137"
 								},
 								{
 									"key": "eventId",
@@ -922,7 +922,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "135"
+									"value": "137"
 								},
 								{
 									"key": "eventId",
@@ -985,7 +985,7 @@
 									"pm.test(\"Test comment 'author' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser).to.have.property('author');\r",
-									"    pm.expect(bodyOfAnser.author, '\"author\" must be 136').to.eql(136);\r",
+									"    pm.expect(bodyOfAnser.author, '\"author\" must be 138').to.eql(138);\r",
 									"});\r",
 									""
 								],
@@ -1026,7 +1026,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "136"
+									"value": "138"
 								},
 								{
 									"key": "eventId",
@@ -1090,7 +1090,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "136"
+									"value": "138"
 								},
 								{
 									"key": "eventId",
@@ -1229,7 +1229,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "136"
+									"value": "138"
 								},
 								{
 									"key": "eventId",
@@ -1298,7 +1298,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "136"
+									"value": "138"
 								},
 								{
 									"key": "eventId",
@@ -1367,7 +1367,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "135"
+									"value": "137"
 								},
 								{
 									"key": "eventId",
@@ -1434,7 +1434,7 @@
 									"pm.test(\"Test comment 'author' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser).to.have.property('author');\r",
-									"    pm.expect(bodyOfAnser.author, '\"author\" must be 136').to.eql(136);\r",
+									"    pm.expect(bodyOfAnser.author, '\"author\" must be 138').to.eql(138);\r",
 									"});\r",
 									""
 								],
@@ -1476,7 +1476,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "136"
+									"value": "138"
 								},
 								{
 									"key": "eventId",
@@ -1605,7 +1605,7 @@
 									"pm.test(\"Test comment 'author' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser).to.have.property('author');\r",
-									"    pm.expect(bodyOfAnser.author, '\"author\" must be 136').to.eql(136);\r",
+									"    pm.expect(bodyOfAnser.author, '\"author\" must be 138').to.eql(138);\r",
 									"});\r",
 									""
 								],
@@ -1646,7 +1646,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "136"
+									"value": "138"
 								},
 								{
 									"key": "eventId",
@@ -1709,7 +1709,7 @@
 									"pm.test(\"Test comment 'author' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser).to.have.property('author');\r",
-									"    pm.expect(bodyOfAnser.author, '\"author\" must be 135').to.eql(135);\r",
+									"    pm.expect(bodyOfAnser.author, '\"author\" must be 137').to.eql(137);\r",
 									"});\r",
 									""
 								],
@@ -1750,7 +1750,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "135"
+									"value": "137"
 								},
 								{
 									"key": "eventId",
@@ -1868,7 +1868,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "136"
+									"value": "138"
 								},
 								{
 									"key": "eventId",
@@ -1929,7 +1929,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "136"
+									"value": "138"
 								},
 								{
 									"key": "eventId",
@@ -1990,7 +1990,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "134"
+									"value": "136"
 								},
 								{
 									"key": "eventId",
@@ -2051,7 +2051,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "136"
+									"value": "138"
 								},
 								{
 									"key": "eventId",
@@ -2223,7 +2223,7 @@
 									"pm.test(\"Test comment 'author' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser).to.have.property('author');\r",
-									"    pm.expect(bodyOfAnser.author, '\"author\" must be 136').to.eql(136);\r",
+									"    pm.expect(bodyOfAnser.author, '\"author\" must be 138').to.eql(138);\r",
 									"});\r",
 									""
 								],
@@ -2264,7 +2264,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "136"
+									"value": "138"
 								},
 								{
 									"key": "eventId",
@@ -2327,7 +2327,7 @@
 									"pm.test(\"Test comment 'author' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser).to.have.property('author');\r",
-									"    pm.expect(bodyOfAnser.author, '\"author\" must be 163').to.eql(136);\r",
+									"    pm.expect(bodyOfAnser.author, '\"author\" must be 138').to.eql(138);\r",
 									"});\r",
 									""
 								],
@@ -2368,7 +2368,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "136"
+									"value": "138"
 								},
 								{
 									"key": "eventId",
@@ -2435,7 +2435,7 @@
 									"pm.test(\"Test comment[0] 'author' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[0]).to.have.property('author');\r",
-									"    pm.expect(bodyOfAnser[0].author, '\"author\" must be 136').to.eql(136);\r",
+									"    pm.expect(bodyOfAnser[0].author, '\"author\" must be 138').to.eql(138);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment[1] 'id' field\", function () {\r",
@@ -2471,7 +2471,7 @@
 									"pm.test(\"Test comment[1] 'author' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[1]).to.have.property('author');\r",
-									"    pm.expect(bodyOfAnser[1].author, '\"author\" must be 136').to.eql(136);\r",
+									"    pm.expect(bodyOfAnser[1].author, '\"author\" must be 138').to.eql(138);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment[2] 'id' field\", function () {\r",
@@ -2507,7 +2507,7 @@
 									"pm.test(\"Test comment[2] 'author' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[2]).to.have.property('author');\r",
-									"    pm.expect(bodyOfAnser[2].author, '\"author\" must be 136').to.eql(136);\r",
+									"    pm.expect(bodyOfAnser[2].author, '\"author\" must be 138').to.eql(138);\r",
 									"});\r",
 									"\r",
 									"\r",
@@ -2544,7 +2544,7 @@
 									"pm.test(\"Test comment[3] 'author' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[3]).to.have.property('author');\r",
-									"    pm.expect(bodyOfAnser[3].author, '\"author\" must be 135').to.eql(135);\r",
+									"    pm.expect(bodyOfAnser[3].author, '\"author\" must be 137').to.eql(137);\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -2594,7 +2594,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "134"
+									"value": "136"
 								},
 								{
 									"key": "eventId",
@@ -2661,7 +2661,7 @@
 									"pm.test(\"Test comment[0] 'author' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[0]).to.have.property('author');\r",
-									"    pm.expect(bodyOfAnser[0].author, '\"author\" must be 135').to.eql(135);\r",
+									"    pm.expect(bodyOfAnser[0].author, '\"author\" must be 137').to.eql(137);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment[1] 'id' field\", function () {\r",
@@ -2697,7 +2697,7 @@
 									"pm.test(\"Test comment[1] 'author' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[1]).to.have.property('author');\r",
-									"    pm.expect(bodyOfAnser[1].author, '\"author\" must be 136').to.eql(136);\r",
+									"    pm.expect(bodyOfAnser[1].author, '\"author\" must be 138').to.eql(138);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment[2] 'id' field\", function () {\r",
@@ -2733,7 +2733,7 @@
 									"pm.test(\"Test comment[2] 'author' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[2]).to.have.property('author');\r",
-									"    pm.expect(bodyOfAnser[2].author, '\"author\" must be 136').to.eql(136);\r",
+									"    pm.expect(bodyOfAnser[2].author, '\"author\" must be 138').to.eql(138);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment[3] 'id' field\", function () {\r",
@@ -2769,7 +2769,7 @@
 									"pm.test(\"Test comment[3] 'author' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[3]).to.have.property('author');\r",
-									"    pm.expect(bodyOfAnser[3].author, '\"author\" must be 136').to.eql(136);\r",
+									"    pm.expect(bodyOfAnser[3].author, '\"author\" must be 138').to.eql(138);\r",
 									"});\r",
 									"\r",
 									""
@@ -2821,7 +2821,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "134"
+									"value": "136"
 								},
 								{
 									"key": "eventId",
@@ -2888,7 +2888,7 @@
 									"pm.test(\"Test comment[0] 'author' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[0]).to.have.property('author');\r",
-									"    pm.expect(bodyOfAnser[0].author, '\"author\" must be 136').to.eql(136);\r",
+									"    pm.expect(bodyOfAnser[0].author, '\"author\" must be 138').to.eql(138);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment[1] 'id' field\", function () {\r",
@@ -2924,7 +2924,7 @@
 									"pm.test(\"Test comment[1] 'author' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[1]).to.have.property('author');\r",
-									"    pm.expect(bodyOfAnser[1].author, '\"author\" must be 136').to.eql(136);\r",
+									"    pm.expect(bodyOfAnser[1].author, '\"author\" must be 138').to.eql(138);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment[2] 'id' field\", function () {\r",
@@ -2960,7 +2960,7 @@
 									"pm.test(\"Test comment[2] 'author' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[2]).to.have.property('author');\r",
-									"    pm.expect(bodyOfAnser[2].author, '\"author\" must be 136').to.eql(136);\r",
+									"    pm.expect(bodyOfAnser[2].author, '\"author\" must be 138').to.eql(138);\r",
 									"});\r",
 									"\r",
 									"\r",
@@ -2997,7 +2997,7 @@
 									"pm.test(\"Test comment[3] 'author' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[3]).to.have.property('author');\r",
-									"    pm.expect(bodyOfAnser[3].author, '\"author\" must be 135').to.eql(135);\r",
+									"    pm.expect(bodyOfAnser[3].author, '\"author\" must be 137').to.eql(137);\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -3033,7 +3033,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "134"
+									"value": "136"
 								},
 								{
 									"key": "eventId",
@@ -3114,7 +3114,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "134"
+									"value": "136"
 								},
 								{
 									"key": "eventId",
@@ -3262,7 +3262,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "134"
+									"value": "136"
 								},
 								{
 									"key": "eventId",
@@ -3336,7 +3336,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "134"
+									"value": "136"
 								},
 								{
 									"key": "eventId",
@@ -3403,7 +3403,7 @@
 									"pm.test(\"Test comment[0] 'author' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser[0]).to.have.property('author');\r",
-									"    pm.expect(bodyOfAnser[0].author, '\"author\" must be 135').to.eql(135);\r",
+									"    pm.expect(bodyOfAnser[0].author, '\"author\" must be 137').to.eql(137);\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -3438,7 +3438,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "135"
+									"value": "137"
 								}
 							]
 						}
@@ -3550,7 +3550,7 @@
 									"pm.test(\"Test comment 'author' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser).to.have.property('author');\r",
-									"    pm.expect(bodyOfAnser.author, '\"author\" must be 135').to.eql(135);\r",
+									"    pm.expect(bodyOfAnser.author, '\"author\" must be 137').to.eql(137);\r",
 									"});"
 								],
 								"type": "text/javascript"
