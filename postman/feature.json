@@ -2321,7 +2321,7 @@
 									"pm.test(\"Test comment 'event' field\", function () {\r",
 									"    var bodyOfAnser = pm.response.json();\r",
 									"    pm.expect(bodyOfAnser).to.have.property('event');\r",
-									"    pm.expect(bodyOfAnser.event, '\"event\" must be 103').to.eql(103);\r",
+									"    pm.expect(bodyOfAnser.event, '\"event\" must be 106').to.eql(106);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Test comment 'author' field\", function () {\r",
